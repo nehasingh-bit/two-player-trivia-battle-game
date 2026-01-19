@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Two Player Trivia Game</title>
+  <style>
+    body { font-family: Arial; }
+    .hidden { display: none; }
+    .correct { color: green; }
+    .wrong { color: red; }
+  </style>
+</head>
+<body>
+
+<h2>Two Player Trivia Battle</h2>
+
+<!-- SCREEN 1 -->
+<div id="screen1">
+  Player 1: <input id="p1"><br><br>
+  Player 2: <input id="p2"><br><br>
+  <button onclick="startGame()">Start Game</button>
+  <p id="error" style="color:red;"></p>
+</div>
+
+<!-- SCREEN 2 -->
+<div id="screen2" class="hidden">
+  <h3 id="roundText"></h3>
+  <select id="category">
+    <option value="">Select Category</option>
+    <option value="music">Music</option>
+    <option value="sport_and_leisure">Sport & Leisure</option>
+    <option value="film_and_tv">Film & TV</option>
+    <option value="arts_and_literature">Arts & Literature</option>
+    <option value="history">History</option>
+    <option value="society_and_culture">Society & Culture</option>
+    <option value="science">Science</option>
+    <option value="geography">Geography</option>
+    <option value="food_and_drink">Food & Drink</option>
+    <option value="general_knowledge">General Knowledge</option>
+  </select><br><br>
+  <button onclick="startRound()">Start Round</button>
+  <p id="catErr" style="color:red;"></p>
+</div>
+
+<!-- SCREEN 3 -->
+<div id="screen3" class="hidden">
+  <p id="info"></p>
+  <p id="score"></p>
+  <h4 id="question"></h4>
+
+  <label><input type="radio" name="answer" value="0"> <span id="opt0"></span></label><br>
+  <label><input type="radio" name="answer" value="1"> <span id="opt1"></span></label><br>
+  <label><input type="radio" name="answer" value="2"> <span id="opt2"></span></label><br>
+  <label><input type="radio" name="answer" value="3"> <span id="opt3"></span></label><br><br>
+
+
+  <p id="result"></p>
+  <button id="nextBtn" onclick="nextQ()" disabled>Next</button>
+</div>
+
+<!-- SCREEN 4 -->
+<div id="screen4" class="hidden">
+  <h3>Round Complete</h3>
+  <button id="nextRoundBtn" onclick="nextRound()">Next Round</button>
+  <button onclick="endGame()">End Game</button>
+</div>
+
+<!-- SCREEN 5 -->
+<div id="screen5" class="hidden">
+  <h2>Final Result</h2>
+  <p id="finalScore"></p>
+  <h3 id="winner"></h3>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
