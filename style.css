@@ -1,0 +1,266 @@
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Poppins',sans-serif;
+      min-height:100vh;
+      background:linear-gradient(135deg,#eef2ff,#f8fbff,#f5f7ff);
+      padding:10px;
+      color:#1e293b;
+      overflow:auto;
+    }
+
+    h2{
+      text-align:center;
+      font-size:32px;
+      color:#4f46e5;
+      margin-bottom:18px;
+      font-weight:700;
+    }
+
+    h3{
+      text-align:center;
+      margin-bottom:15px;
+      color:#4338ca;
+      font-size:26px;
+    }
+
+    h4{
+      font-size:24px;
+      margin-bottom:18px;
+      line-height:1.4;
+      color:#1e293b;
+    }
+
+    /* ================= SCREENS ================= */
+
+    #screen1,
+    #screen2,
+    #screen3,
+    #screen4,
+    #screen5{
+      width:100%;
+      max-width:1000px;
+      margin:auto;
+      background:rgba(255,255,255,0.82);
+      backdrop-filter:blur(12px);
+      border-radius:24px;
+      padding:18px;
+      box-shadow:
+      0 8px 24px rgba(0,0,0,0.08),
+      inset 0 1px 0 rgba(255,255,255,0.7);
+      border:1px solid rgba(255,255,255,0.4);
+      animation:fadeIn 0.4s ease;
+    }
+
+    /* ================= INPUTS ================= */
+
+    input[type="text"],
+    select,
+    input{
+      width:100%;
+      padding:12px;
+      margin-top:8px;
+      margin-bottom:14px;
+      border:none;
+      border-radius:14px;
+      background:#f5f7ff;
+      outline:none;
+      font-size:15px;
+      transition:0.3s;
+      border:2px solid transparent;
+    }
+
+    input[type="text"]:focus,
+    select:focus{
+      border-color:#a5b4fc;
+      background:white;
+      box-shadow:0 0 0 4px rgba(99,102,241,0.12);
+    }
+
+    /* ================= BUTTON ================= */
+
+    button{
+      padding:10px 18px;
+      border:none;
+      border-radius:14px;
+      background:linear-gradient(135deg,#7c83ff,#5b67f1);
+      color:white;
+      font-size:15px;
+      font-weight:600;
+      cursor:pointer;
+      transition:0.3s;
+      margin-top:8px;
+      box-shadow:0 6px 16px rgba(92,103,241,0.22);
+    }
+
+    button:hover{
+      transform:translateY(-2px);
+      box-shadow:0 10px 20px rgba(92,103,241,0.3);
+    }
+
+    button:disabled{
+      background:#c7d2fe;
+      cursor:not-allowed;
+      box-shadow:none;
+    }
+
+    /* ================= INFO ================= */
+
+    #info{
+      background:#eef2ff;
+      padding:12px;
+      border-radius:14px;
+      margin-bottom:10px;
+      font-size:14px;
+      font-weight:500;
+      color:#475569;
+    }
+
+    #score{
+      background:#e0e7ff;
+      padding:12px;
+      border-radius:14px;
+      margin-bottom:14px;
+      font-size:16px;
+      font-weight:600;
+      color:#334155;
+    }
+
+    /* ================= OPTIONS ================= */
+
+    label{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      background:white;
+      padding:12px 16px;
+      border-radius:16px;
+      margin-bottom:12px;
+      cursor:pointer;
+      transition:0.25s;
+      border:2px solid transparent;
+      box-shadow:0 3px 8px rgba(0,0,0,0.04);
+      font-size:15px;
+    }
+
+    label:hover{
+      border-color:#a5b4fc;
+      transform:translateX(3px);
+      background:#fafbff;
+    }
+
+    input[type="radio"]{
+      width:18px;
+      height:18px;
+      accent-color:#6366f1;
+    }
+
+    /* ================= RESULT ================= */
+
+    #result{
+      margin-top:10px;
+      text-align:center;
+      font-size:18px;
+      font-weight:700;
+    }
+
+    .correct{
+      color:#10b981;
+    }
+
+    .wrong{
+      color:#ef4444;
+    }
+
+    /* ================= FINAL ================= */
+
+    #finalScore{
+      text-align:center;
+      font-size:24px;
+      margin-top:15px;
+      font-weight:600;
+    }
+
+    #winner{
+      text-align:center;
+      margin-top:18px;
+      font-size:30px;
+      color:#4f46e5;
+      font-weight:700;
+    }
+
+    /* ================= ERROR ================= */
+
+    #error,
+    #catErr{
+      color:#ef4444;
+      font-weight:600;
+      margin-top:8px;
+      text-align:center;
+    }
+
+    /* ================= SCREEN 4 ================= */
+
+    #screen4{
+      text-align:center;
+    }
+
+    #screen4 button{
+      margin:8px;
+    }
+
+    /* ================= HIDDEN ================= */
+
+    .hidden{
+      display:none !important;
+    }
+
+    /* ================= ANIMATION ================= */
+
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+        transform:translateY(12px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media(max-width:768px){
+
+      body{
+        overflow:auto;
+      }
+
+      h2{
+        font-size:24px;
+      }
+
+      h4{
+        font-size:18px;
+      }
+
+      #screen1,
+      #screen2,
+      #screen3,
+      #screen4,
+      #screen5{
+        padding:15px;
+      }
+
+      button{
+        width:100%;
+      }
+
+    }
